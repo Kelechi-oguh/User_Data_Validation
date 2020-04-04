@@ -18,11 +18,20 @@ def Password_Satisfaction():
         print("New password selected \n")
     return "Account Created \n"
 
+def name_check(value): 
+        while len(value)==0:
+            value = input("Please do not leave blank!: ")
+        return value
+        
 New_User = 'y'
 while New_User == 'y':
     Firstname = input("Enter First name: ")
+    Firstname = name_check(Firstname)
     Lastname = input("Enter Last name: ")
+    Lastname = name_check(Lastname)
     Email = input("Enter Email Address: ")
+    Email = name_check(Email)
+
     FullName = Lastname + " " + Firstname
 
     rand_password = Firstname[:2] + Lastname[-2:] + randomString()
