@@ -12,9 +12,9 @@ def Password_Satisfaction():
     if password_satisfy == 'y':
         pass
     elif password_satisfy == 'n':
-        rand_password = input("Enter a Password: ")
+        rand_password = input("Enter a Password (at least 7 characters): ")
         while len(rand_password) < 7:
-            rand_password = input("Password Length must be 7 or more: ")
+            rand_password = input("Password Length must be 7 or more characters: ")
         print("New password selected \n")
     return "Account Created \n"
 
@@ -22,7 +22,7 @@ def name_check(value):
         while len(value)==0:
             value = input("Please do not leave blank!: ")
         return value
-        
+
 New_User = 'y'
 while New_User == 'y':
     Firstname = input("Enter First name: ")
